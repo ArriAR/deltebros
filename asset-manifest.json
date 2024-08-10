@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/deltebros/static/css/main.79ab8621.css",
-    "main.js": "/deltebros/static/js/main.63ff186c.js",
-    "static/js/453.20a5f004.chunk.js": "/deltebros/static/js/453.20a5f004.chunk.js",
-    "static/media/olivenbaum_ernte.jpeg": "/deltebros/static/media/olivenbaum_ernte.0ab70a957947e6821800.jpeg",
-    "static/media/Ebros_Tree_RGB.png": "/deltebros/static/media/Ebros_Tree_RGB.a551e6c3a45647feb50f.png",
-    "index.html": "/deltebros/index.html",
-    "main.79ab8621.css.map": "/deltebros/static/css/main.79ab8621.css.map",
-    "main.63ff186c.js.map": "/deltebros/static/js/main.63ff186c.js.map",
-    "453.20a5f004.chunk.js.map": "/deltebros/static/js/453.20a5f004.chunk.js.map"
+    "main.css": "/static/css/main.79ab8621.css",
+    "main.js": "/static/js/main.422ee5d9.js",
+    "static/js/453.20a5f004.chunk.js": "/static/js/453.20a5f004.chunk.js",
+    "static/media/olivenbaum_ernte.jpeg": "/static/media/olivenbaum_ernte.0ab70a957947e6821800.jpeg",
+    "static/media/Ebros_Tree_RGB.png": "/static/media/Ebros_Tree_RGB.a551e6c3a45647feb50f.png",
+    "index.html": "/index.html",
+    "main.79ab8621.css.map": "/static/css/main.79ab8621.css.map",
+    "main.422ee5d9.js.map": "/static/js/main.422ee5d9.js.map",
+    "453.20a5f004.chunk.js.map": "/static/js/453.20a5f004.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.79ab8621.css",
-    "static/js/main.63ff186c.js"
+    "static/js/main.422ee5d9.js"
   ]
 }
