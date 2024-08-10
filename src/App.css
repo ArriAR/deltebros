@@ -1,0 +1,187 @@
+
+:root {
+  font-size: 16px; /* Base font size, 1em = 16px */
+}
+
+.App {
+  text-align: center;
+  background-color: #fcf300;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.App-header {
+  background-color: #fcf300;
+  padding: 2.5em; /* Relative to root font size */
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-logo {
+  height: 100px; /* Relative to root font size */
+  pointer-events: none;
+}
+
+.responsive-title {
+  font-size: 5.625em; /* 5.625em = 90px at 16px base font size */
+  font-weight: bold;
+}
+
+.App-footer {
+  font-size: 1em; /* Standard text size */
+  padding: 1.25em 0; /* Padding of 20px at 16px base font size */
+}
+
+@media (max-width: 48em) { /* 48em = 768px */
+  .App-header {
+    padding: 1.25em; /* 20px padding */
+  }
+
+  .App-logo {
+    height: 18.75em; /* Larger logo for smaller screens */
+  }
+
+  .responsive-title {
+    font-size: 4.25em; /* Larger font size for smaller screens */
+    font-weight: bold;
+  }
+
+  .App-footer {
+    font-size: 0.875em; /* Slightly smaller footer text */
+  }
+}
+
+@media (min-width: 48.063em) and (max-width: 75em) { /* Between 769px and 1200px */
+  .responsive-title {
+    font-size: 12em; /* Slightly larger font size for medium screens */
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 75.063em) { /* Larger screens, 1201px and above */
+  .responsive-title {
+    font-size: 13em; /* Default font size for large screens */
+    font-weight: bold;
+  }
+}
+
+.responsive-subtitle {
+  font-size: 2.5em; /* Eine kleinere Schriftgröße als der Titel */
+  font-weight: bold;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+@media (max-width: 48em) { /* 48em = 768px */
+  .responsive-subtitle {
+    font-size: 2em; /* Kleinere Schriftgröße für kleinere Bildschirme */
+    font-weight: bold;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+@media (min-width: 48.063em) and (max-width: 75em) { /* Zwischen 769px und 1200px */
+  .responsive-subtitle {
+    font-size: 3.5em; /* Schriftgröße für mittlere Bildschirme */
+    font-weight: bold;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}
+
+@media (min-width: 75.063em) { /* Größere Bildschirme, 1201px und größer */
+  .responsive-subtitle {
+    font-size: 4em; /* Schriftgröße für große Bildschirme */
+    font-weight: bold;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}
+
+
+/* General scroller styling */
+.scroller {
+  width: 100vw; /* Full width of the viewport */
+  overflow: hidden; /* Hide overflow to prevent showing non-scrolling parts */
+  position: relative; /* Ensure the container is positioned correctly */
+}
+
+.scroller__inner {
+  display: flex;
+  white-space: nowrap; /* Prevent line breaks */
+  gap: 2em; /* Space between items */
+  font-size: 4.25em; /* Match subtitle font size */
+  font-weight: bold; /* Same weight as subtitle */
+  animation: scroll 20s linear infinite;
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+/* Keyframe animation for continuous scrolling */
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+/* Speed adjustments based on data attribute */
+.scroller[data-speed="fast"] .scroller__inner {
+  animation-duration: 70s;
+}
+
+.scroller[data-speed="slow"] .scroller__inner {
+  animation-duration: 30s;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .scroller__inner {
+    font-size: 3.25em; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .scroller__inner {
+    font-size: 2.5em; /* Further adjust for very small screens */
+  }
+}
+
+/* Footer */
+
+/* Flexbox for Two Row Layout */
+.footer-row {
+  display: flex;
+  justify-content: space-between; /* Space between the two columns */
+  flex-wrap: wrap; /* Allow wrapping if necessary */
+  gap: 20px; /* Space between the rows */
+}
+
+/* Column Styling */
+.footer-row p {
+  flex: 1; /* Make both columns take equal space */
+  margin: 0;
+  padding: 10px;
+}
+
+/* Responsive Media Query */
+@media (max-width: 480px) {
+  .footer-row {
+    flex-direction: column; /* Stack the columns vertically */
+    align-items: center; /* Center align the content */
+  }
+}
